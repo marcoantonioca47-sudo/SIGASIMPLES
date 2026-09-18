@@ -24,7 +24,7 @@ const seps=[['LT-1025','PED-4587','Ponte Nova','860 kg','42','08:15','09:02','Fi
 const cars=[['ROM-783','Ponte Nova','João Silva','OFA-4452','12.500 kg','48','10:20','12:05','OK','ok'],['ROM-781','Rio Casca','Pedro Alves','HKG-7810','7.400 kg','28','09:10','11:00','NÃO OK','bad']];
 const conf=[['Separação','PED-4587','09:10','OK','—','—','—'],['Separação','LT-1025','10:45','OK','—','—','—'],['Carregamento','ROM-783','12:15','OK','—','—','—'],['Carregamento','ROM-785','13:30','NÃO OK','2','2','Volumes divergentes']];
 const b=(t,c)=>`<span class="badge ${c}">${t}</span>`;
-function today(){return new Date().toLocaleDateString('pt-BR')}
+function today(){return new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'}).format(new Date())}
 function dt(h){return `<span class="datetime"><b>${today()}</b><small>${h}</small></span>`}
 function okNok(s){return b((s==='Finalizada'||s==='OK')?'OK':'NOK',(s==='Finalizada'||s==='OK')?'ok':'bad')}
 const bars=a=>a.map(x=>`<div class="barrow"><label>${x[0]}</label><div class="bar"><div class="fill ${x[3]||''}" style="width:${Math.min(100,Math.round(x[1]/x[2]*100))}%"></div></div><strong>${x[1]}</strong></div>`).join('');
