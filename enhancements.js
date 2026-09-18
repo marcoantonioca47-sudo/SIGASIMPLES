@@ -1,6 +1,8 @@
 /* SIGA 3.0 - melhorias: filtros inteligentes, notificacoes, graficos e detalhes */
 (function(){
   const oldGo=window.go;
+  window.renderNav=function(){if(!currentUser)return;const items=[['home','Início','always'],['separacoes','Minhas Separações','separacoes'],['carregamentos','Meus Carregamentos','carregamentos'],['conferencias','Minhas Conferências','conferencias'],['atividades','Minhas Atividades','atividades'],['desempenho','Meu Desempenho','desempenho'],['notificacoes','Notificações','always'],['usuarios','Cadastrar Usuários','admin'],['perfil','Meu Perfil','always'],['sair','Sair','always']];document.querySelector('#nav').innerHTML=items.filter(x=>x[2]==='always'||x[2]==='admin'&&currentUser.admin||currentUser.permissoes[x[2]]).map(x=>'<button class="'+(page===x[0]?'active':'')+'" onclick="go(\\''+x[0]+'\\')"><span class="nav-icon">'+(x[0]==='notificacoes'?'<span style="font-size:17px">🔔</span>':(icons[x[0]]||''))+'</span><span class="nav-text">'+x[1]+(x[0]==='notificacoes'?'<em class="nav-alert">4</em>':'')+'</span></button>').join('')};
+
   const statusKey=s=>{const v=String(s||'').toLowerCase();if(v.includes('pend'))return 'pending';if(v.includes('andamento'))return 'progress';if(v.includes('final')||v.includes('ok'))return 'final';return 'other'};
   const statusLabel=s=>{const k=statusKey(s);return k==='pending'?'Pendente':k==='progress'?'Em andamento':k==='final'?'Finalizado':String(s||'')};
   const esc2=s=>String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
