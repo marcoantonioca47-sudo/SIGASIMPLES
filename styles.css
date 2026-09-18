@@ -50,3 +50,15 @@ input,select,textarea{font-size:13px;line-height:1.3;}
 #main > .title + .panel + .panel h3,#main > .title + .panel + .panel .table th,#main > .title + .panel + .panel .table td,#main > .title + .panel + .panel .sub,#main > .title + .panel + .panel .user-form label,#main > .title + .panel + .panel .checks label,#main > .title + .panel + .panel .form-actions .btn{color:#fff;text-shadow:0 1px 0 rgba(255,255,255,.42),0 -1px 0 rgba(255,255,255,.12),0 2px 5px rgba(0,0,0,.55),0 0 10px rgba(239,63,77,.38)}
 #main > .title + .panel + .panel h3{background:linear-gradient(180deg,#fff 0%,#ffd8dc 22%,#ff6875 48%,#d7192c 72%,#ff8a94 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:none}
 #main > .title + .panel + .panel .table th{color:#ff9ca5;text-shadow:0 1px 2px rgba(0,0,0,.65),0 0 8px rgba(239,63,77,.35)}
+
+
+/* Padronização global: todas as escritas com o mesmo acabamento vitrificado vermelho */
+body,body *{text-shadow:0 1px 0 rgba(255,255,255,.42),0 -1px 0 rgba(255,255,255,.12),0 2px 5px rgba(0,0,0,.55),0 0 10px rgba(239,63,77,.38)}
+body .loginbox h2,body .title h1,body .panel h3,body .card strong,body header b,body .brand,body .me b,body .who,body .asidefoot b{background:linear-gradient(180deg,#fff 0%,#ffd8dc 22%,#ff6875 48%,#d7192c 72%,#ff8a94 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:none}
+body .title p,body .sub,body .panel,body .card,body .event,body .barrow,body .info,body .permission,body .table,body .field label,body .checks label,body .filters,body .bottom,body nav button,body .me small,body .who small,body .brand small,body .loginbox p,body .loginbox label,body .loginbox footer,body .loginbox>small{color:#fff}
+body .table th{color:#ff9ca5;text-shadow:0 1px 2px rgba(0,0,0,.65),0 0 8px rgba(239,63,77,.35)}
+body .table td,body .table td *,body .event *,body .barrow *,body .info *,body .permission *,body .field label,body .checks label{color:#fff}
+body input,body select,body textarea{color:#fff;text-shadow:0 1px 0 rgba(255,255,255,.35),0 2px 5px rgba(0,0,0,.55),0 0 8px rgba(239,63,77,.3)}
+body input::placeholder{color:#ffd8dc}body button,body .btn{color:#fff;text-shadow:0 1px 0 rgba(255,255,255,.42),0 2px 5px rgba(0,0,0,.55),0 0 9px rgba(239,63,77,.35)}
+body .datetime b,body .datetime small{color:#fff;text-shadow:0 1px 0 rgba(255,255,255,.42),0 2px 5px rgba(0,0,0,.5),0 0 8px rgba(239,63,77,.32)}
+body .loginmsg{color:#ffb6bb;text-shadow:0 1px 2px rgba(0,0,0,.6),0 0 8px rgba(239,63,77,.4)}
